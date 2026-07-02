@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Home Depot · Marketplace vs Open Exchange · Abr–Jun 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#1A2332;--orange:#F96302;--orange-lt:#FFF1E6;--oe:#2E7D32;--oe-lt:#E8F5E9;--mp:#1565C0;--mp-lt:#E3F0FB;
+--ink:#28313F;--mid:#6B7A8D;--faint:#9AA7B5;--line:#E4E9EF;--panel:#F4F7FA}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#DDE3EA;color:var(--ink);padding:24px;font-size:13px}
+.wrap{max-width:1080px;margin:0 auto;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 8px 40px rgba(20,35,60,.18)}
+.hdr{background:var(--navy);padding:20px 30px;display:flex;justify-content:space-between;align-items:center}
+.hdr-l{display:flex;align-items:center;gap:16px}
+.hdr-l img{height:52px;width:52px;border-radius:7px;object-fit:cover;border:2px solid var(--orange)}
+.hdr h1{color:#fff;font-size:19px;font-weight:700}.hdr h1 span{color:var(--orange)}
+.hdr .sub{color:#9DB0C6;font-size:11px;margin-top:3px;letter-spacing:.3px}
+.hdr-r{text-align:right}.hdr-r .badge{display:inline-block;background:var(--orange);color:#fff;font-size:9.5px;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+.hdr-r .per{color:#7E92AB;font-size:10.5px;margin-top:6px}
+.sh{padding:9px 30px;font-size:12px;font-weight:700;color:#fff;letter-spacing:.4px;display:flex;align-items:center;gap:9px}
+.sh .n{opacity:.55;font-weight:800}
+.sh-navy{background:var(--navy)}.sh-or{background:var(--orange)}.sh-mp{background:var(--mp)}.sh-oe{background:var(--oe)}
+.body{padding:20px 30px}
+.note{font-size:11.5px;color:var(--mid);line-height:1.6;margin-bottom:16px}.note b{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:6px}
+.kpi{padding:14px 18px;border-right:1px solid var(--line)}.kpi:last-child{border-right:none}
+.kpi .l{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--faint)}
+.kpi .v{font-size:24px;font-weight:800;color:var(--navy);margin-top:5px;line-height:1}
+.kpi .v.or{color:var(--orange)}.kpi .v.mp{color:var(--mp)}.kpi .v.oe{color:var(--oe)}
+.kpi .s{font-size:10.5px;color:var(--mid);margin-top:5px}
+table{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:4px}
+th{padding:8px 11px;text-align:right;font-size:9.5px;font-weight:700;color:#fff;letter-spacing:.3px;text-transform:uppercase}
+th:first-child{text-align:left}
+th.hn{background:var(--navy)}th.ho{background:var(--oe)}th.hm{background:var(--mp)}th.hor{background:var(--orange)}
+td{padding:7px 11px;text-align:right;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+td:first-child{text-align:left;font-weight:600;color:var(--ink)}
+.pos{color:var(--oe);font-weight:700}.neg{color:#C0562B;font-weight:700}
+.rec{font-size:9px;font-weight:700;padding:3px 9px;border-radius:12px;text-transform:uppercase;white-space:nowrap}
+.rec.mp{background:var(--mp);color:#fff}.rec.oe{background:var(--oe);color:#fff}.rec.no{background:#EDEFF2;color:#8795A5}
+.chartbox{border:1px solid var(--line);border-radius:8px;padding:16px 18px 12px;margin-top:14px}
+.chartbox .ctit{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.leg{display:flex;gap:18px;justify-content:center;margin-top:10px;font-size:11px;color:var(--mid);flex-wrap:wrap}
+.leg span{display:flex;align-items:center;gap:7px}
+.sw{width:16px;height:11px;border-radius:3px}.swl{width:18px;height:3px;border-radius:2px}
+.infobox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:8px;padding:11px 15px;font-size:11px;color:var(--mid);line-height:1.55;margin-top:10px}
+.infobox b{color:var(--ink)}
+.callout{background:var(--orange-lt);border:1px solid #F7D9C2;border-left:3px solid var(--orange);border-radius:8px;padding:13px 16px;font-size:11.5px;line-height:1.6;color:var(--ink);margin-top:14px}
+.callout b{color:#B24700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;margin-top:16px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
+.wcols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+@media(max-width:720px){.wcols{grid-template-columns:1fr}}
+.wcol{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.wcol .wh{padding:9px 14px;font-size:11.5px;font-weight:700;color:#fff}
+.wcol.good .wh{background:var(--oe)}.wcol.bad .wh{background:#C0562B}
+.wcol ul{list-style:none;padding:6px 14px 12px}
+.wcol li{font-size:11px;padding:6px 0;border-bottom:1px solid var(--line);color:var(--mid);display:flex;justify-content:space-between;gap:10px}
+.wcol li:last-child{border-bottom:none}.wcol li b{color:var(--ink);font-weight:600}
+.wcol li .m{color:var(--faint);white-space:nowrap;font-size:10.5px}
+/* campaign structure */
+.struct{margin-top:14px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.struct .scampt{background:var(--navy);color:#fff;padding:9px 14px;font-size:11.5px;font-weight:700}
+.io{display:grid;grid-template-columns:150px 1fr 120px 90px;border-top:1px solid var(--line);align-items:center}
+.io>div{padding:10px 14px;font-size:11px}
+.io .ioname{font-weight:700;color:#fff}
+.io.i1 .ioname{background:var(--oe)}.io.i2 .ioname{background:var(--mp)}.io.i3 .ioname{background:var(--orange)}
+.io .aud{color:var(--ink)}.io .aud small{color:var(--faint);display:block;margin-top:2px}
+.io .inv{text-align:center;font-weight:700}.io .inv.mp{color:var(--mp)}.io .inv.oe{color:var(--oe)}
+.io .bid{text-align:center;color:var(--mid);font-size:10.5px}
+.io.head>div{background:var(--panel);font-size:9.5px;font-weight:700;text-transform:uppercase;color:var(--faint);letter-spacing:.3px;padding:7px 14px}
+.excl{padding:9px 14px;font-size:10.5px;color:#C0562B;background:#FCF3F0;border-top:1px solid var(--line)}
+@media(max-width:720px){.io{grid-template-columns:1fr}.io>div{padding:6px 14px}}
+.steps .step{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}
+.steps .step:last-child{border-bottom:none}
+.step .num{flex-shrink:0;width:30px;height:30px;border-radius:7px;background:var(--navy);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.step .num.hl{background:var(--orange)}
+.step .stt{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.step .std{font-size:11.5px;color:var(--mid);line-height:1.55}.step .std b{color:var(--ink)}
+.foot{background:var(--navy);padding:12px 30px;font-size:10px;color:#8FA1B8;line-height:1.7}.foot b{color:#cfd9e6}
+</style></head><body>
+<div class="wrap">
+
+<div class="hdr">
+  <div class="hdr-l"><img src="data:image/jpeg;base64,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" alt="THD">
+    <div><h1>The Home Depot · <span>Marketplace vs Open Exchange</span></h1>
+    <div class="sub">DV360 · Consumo semanal, costo por sesión y reestructura de audiencias · MOTECH by Havas</div></div></div>
+  <div class="hdr-r"><span class="badge">Abr – Jun 2026</span>
+    <div class="per">Ventana MP: ~10 días · coincide con Hot Sale</div></div>
+</div>
+
+<!-- 01 RESUMEN -->
+<div class="sh sh-navy"><span class="n">01</span> RESUMEN EJECUTIVO</div>
+<div class="body">
+  <div class="note">La evaluación del Marketplace no fue un periodo limpio: <b>el 64% del gasto de MP cayó en la semana de
+    Hot Sale (25–31 May)</b>, cuando toda la subasta se encarece. Aun así, <b>el CPM ponderado total (MP + Open) se mantuvo
+    estable</b> ($10.74 abril → $11.48 mayo, +7%), un incremento marginal dentro de la variación normal del periodo. El costo por sesión sí subió
+    en mayo por Hot Sale, no por MP. El problema de fondo es de <b>asignación</b>: MP se conectó a audiencias genéricas (70%)
+    y a 0% de first-party.</div>
+  <div class="kpis">
+    <div class="kpi"><div class="l">Costo por sesión · Mayo</div><div class="v or">$3.33</div><div class="s">pico Hot Sale · vs $1.90 abril</div></div>
+    <div class="kpi"><div class="l">CPM total (MP+OE) · estable</div><div class="v">+7%</div><div class="s">$10.74 → $11.48 pese al test</div></div>
+    <div class="kpi"><div class="l">MP en genéricas</div><div class="v neg">70%</div><div class="s">Other-Audiences · baja intención</div></div>
+    <div class="kpi"><div class="l">First-party en MP</div><div class="v neg">0%</div><div class="s">la mejor data, fuera del premium</div></div>
+  </div>
+</div>
+
+<!-- 02 TIMELINE -->
+<div class="sh sh-mp"><span class="n">02</span> CONSUMO SEMANAL Y ESTABILIDAD DEL CPM PONDERADO</div>
+<div class="body">
+  <div class="chartbox" style="margin-top:0">
+    <div class="ctit">Gasto semanal por tipo de inventario (MXN)</div>
+    <svg viewBox="0 0 900 290" width="100%" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="232" x2="882" y2="232" stroke="#EEF2F6"/><text x="52" y="235" font-size="9" fill="#9AA7B5" text-anchor="end">$0k</text><line x1="60" y1="180" x2="882" y2="180" stroke="#EEF2F6"/><text x="52" y="184" font-size="9" fill="#9AA7B5" text-anchor="end">$30k</text><line x1="60" y1="129" x2="882" y2="129" stroke="#EEF2F6"/><text x="52" y="132" font-size="9" fill="#9AA7B5" text-anchor="end">$60k</text><line x1="60" y1="78" x2="882" y2="78" stroke="#EEF2F6"/><text x="52" y="80" font-size="9" fill="#9AA7B5" text-anchor="end">$90k</text><line x1="60" y1="26" x2="882" y2="26" stroke="#EEF2F6"/><text x="52" y="29" font-size="9" fill="#9AA7B5" text-anchor="end">$120k</text><line x1="566" y1="26" x2="566" y2="232" stroke="#F96302" stroke-width="1.4" stroke-dasharray="4 3" opacity=".6"/><text x="566" y="18" font-size="10" font-weight="700" fill="#F96302" text-anchor="middle">HOT SALE · MP 64%</text><polygon points="60.0,232 60.0,174.4 123.2,145.9 186.5,154.2 249.7,162.6 312.9,166.7 376.2,131.7 439.4,155.0 502.6,201.1 565.8,117.2 629.1,107.4 692.3,208.1 755.5,219.1 818.8,222.6 882.0,230.3 882.0,232" fill="#2E7D32" opacity=".10"/><polyline points="60.0,174.4 123.2,145.9 186.5,154.2 249.7,162.6 312.9,166.7 376.2,131.7 439.4,155.0 502.6,201.1 565.8,117.2 629.1,107.4 692.3,208.1 755.5,219.1 818.8,222.6 882.0,230.3" fill="none" stroke="#2E7D32" stroke-width="2.6" stroke-linejoin="round"/><circle cx="60.0" cy="174.4" r="3.5" fill="#2E7D32"/><circle cx="123.2" cy="145.9" r="3.5" fill="#2E7D32"/><circle cx="186.5" cy="154.2" r="3.5" fill="#2E7D32"/><circle cx="249.7" cy="162.6" r="3.5" fill="#2E7D32"/><circle cx="312.9" cy="166.7" r="3.5" fill="#2E7D32"/><circle cx="376.2" cy="131.7" r="3.5" fill="#2E7D32"/><circle cx="439.4" cy="155.0" r="3.5" fill="#2E7D32"/><circle cx="502.6" cy="201.1" r="3.5" fill="#2E7D32"/><circle cx="565.8" cy="117.2" r="3.5" fill="#2E7D32"/><circle cx="629.1" cy="107.4" r="3.5" fill="#2E7D32"/><circle cx="692.3" cy="208.1" r="3.5" fill="#2E7D32"/><circle cx="755.5" cy="219.1" r="3.5" fill="#2E7D32"/><circle cx="818.8" cy="222.6" r="3.5" fill="#2E7D32"/><circle cx="882.0" cy="230.3" r="3.5" fill="#2E7D32"/><polygon points="60.0,232 60.0,211.1 123.2,207.9 186.5,216.4 249.7,225.5 312.9,212.2 376.2,200.4 439.4,198.1 502.6,203.3 565.8,30.0 629.1,212.1 692.3,230.4 755.5,231.0 818.8,232.0 882.0,232.0 882.0,232" fill="#1565C0" opacity=".10"/><polyline points="60.0,211.1 123.2,207.9 186.5,216.4 249.7,225.5 312.9,212.2 376.2,200.4 439.4,198.1 502.6,203.3 565.8,30.0 629.1,212.1 692.3,230.4 755.5,231.0 818.8,232.0 882.0,232.0" fill="none" stroke="#1565C0" stroke-width="2.6" stroke-linejoin="round"/><circle cx="60.0" cy="211.1" r="3.5" fill="#1565C0"/><circle cx="123.2" cy="207.9" r="3.5" fill="#1565C0"/><circle cx="186.5" cy="216.4" r="3.5" fill="#1565C0"/><circle cx="249.7" cy="225.5" r="3.5" fill="#1565C0"/><circle cx="312.9" cy="212.2" r="3.5" fill="#1565C0"/><circle cx="376.2" cy="200.4" r="3.5" fill="#1565C0"/><circle cx="439.4" cy="198.1" r="3.5" fill="#1565C0"/><circle cx="502.6" cy="203.3" r="3.5" fill="#1565C0"/><circle cx="565.8" cy="30.0" r="3.5" fill="#1565C0"/><circle cx="629.1" cy="212.1" r="3.5" fill="#1565C0"/><circle cx="692.3" cy="230.4" r="3.5" fill="#1565C0"/><circle cx="755.5" cy="231.0" r="3.5" fill="#1565C0"/><circle cx="818.8" cy="232.0" r="3.5" fill="#1565C0"/><circle cx="882.0" cy="232.0" r="3.5" fill="#1565C0"/><text x="60" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">1 Abr</text><text x="123" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">6 Abr</text><text x="186" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">13 Abr</text><text x="250" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">20 Abr</text><text x="313" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">27 Abr</text><text x="376" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">4 May</text><text x="439" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">11 May</text><text x="503" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">18 May</text><text x="566" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">25 May</text><text x="629" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">1 Jun</text><text x="692" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">8 Jun</text><text x="756" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">15 Jun</text><text x="819" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">22 Jun</text><text x="882" y="248" font-size="8.5" fill="#6B7A8D" text-anchor="middle">29 Jun</text><line x1="60" y1="26" x2="60" y2="232" stroke="#D6DEE7"/><line x1="60" y1="232" x2="882" y2="232" stroke="#D6DEE7"/></svg>
+    <div class="leg"><span><span class="sw" style="background:#2E7D32"></span>Open Exchange</span>
+      <span><span class="sw" style="background:#1565C0"></span>Marketplace (PMP)</span></div>
+    <div class="infobox"><b>Ventana de evaluación de MP = ~10 días</b> y coincidió con <b>Hot Sale</b>. En esa semana el gasto
+      de MP subió a 64% del total porque las subastas se encarecen y se compró inventario premium para el evento — no es un
+      costo estructural del Marketplace, sino de un test corto en el periodo más caro del año.</div>
+  </div>
+
+  <div class="chartbox">
+    <div class="ctit">Evolución del CPM ponderado total (ambos inventarios) · MXN</div>
+    <svg viewBox="0 0 900 270" width="100%" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="214" x2="882" y2="214" stroke="#EEF2F6"/><text x="52" y="217" font-size="9" fill="#9AA7B5" text-anchor="end">$0</text><line x1="60" y1="167" x2="882" y2="167" stroke="#EEF2F6"/><text x="52" y="170" font-size="9" fill="#9AA7B5" text-anchor="end">$5</text><line x1="60" y1="120" x2="882" y2="120" stroke="#EEF2F6"/><text x="52" y="123" font-size="9" fill="#9AA7B5" text-anchor="end">$10</text><line x1="60" y1="73" x2="882" y2="73" stroke="#EEF2F6"/><text x="52" y="76" font-size="9" fill="#9AA7B5" text-anchor="end">$15</text><line x1="60" y1="26" x2="882" y2="26" stroke="#EEF2F6"/><text x="52" y="29" font-size="9" fill="#9AA7B5" text-anchor="end">$20</text><line x1="566" y1="26" x2="566" y2="214" stroke="#F96302" stroke-width="1.4" stroke-dasharray="4 3" opacity=".55"/><text x="566" y="18" font-size="9.5" font-weight="700" fill="#F96302" text-anchor="middle">Hot Sale · MP 64% → CPM $11.76 (sin pico)</text><polyline points="60.0,76.7 123.2,85.3 186.5,83.3 249.7,36.1 312.9,41.0 376.2,57.2 439.4,59.7 502.6,81.4 565.8,97.6 629.1,139.6 692.3,161.6 755.5,160.9 818.8,152.4 882.0,148.0" fill="none" stroke="#9AB7D6" stroke-width="2" stroke-linejoin="round"/><polyline points="60.0,82.6 123.2,90.3 186.5,91.5 249.7,55.6 312.9,41.2 376.2,64.2 439.4,103.6 502.6,119.6 565.8,103.5 629.1,136.4 692.3,160.3 755.5,158.7 818.8,152.4 882.0,148.0" fill="none" stroke="#1A2332" stroke-width="2.8" stroke-linejoin="round"/><circle cx="60.0" cy="82.6" r="3.3" fill="#1A2332"/><circle cx="123.2" cy="90.3" r="3.3" fill="#1A2332"/><circle cx="186.5" cy="91.5" r="3.3" fill="#1A2332"/><circle cx="249.7" cy="55.6" r="3.3" fill="#1A2332"/><circle cx="312.9" cy="41.2" r="3.3" fill="#1A2332"/><circle cx="376.2" cy="64.2" r="3.3" fill="#1A2332"/><circle cx="439.4" cy="103.6" r="3.3" fill="#1A2332"/><circle cx="502.6" cy="119.6" r="3.3" fill="#1A2332"/><circle cx="565.8" cy="103.5" r="3.3" fill="#1A2332"/><circle cx="629.1" cy="136.4" r="3.3" fill="#1A2332"/><circle cx="692.3" cy="160.3" r="3.3" fill="#1A2332"/><circle cx="755.5" cy="158.7" r="3.3" fill="#1A2332"/><circle cx="818.8" cy="152.4" r="3.3" fill="#1A2332"/><circle cx="882.0" cy="148.0" r="3.3" fill="#1A2332"/><text x="566" y="94" font-size="10" font-weight="700" fill="#1A2332" text-anchor="middle">$11.76</text><text x="60" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">1 Abr</text><text x="123" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">6 Abr</text><text x="186" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">13 Abr</text><text x="250" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">20 Abr</text><text x="313" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">27 Abr</text><text x="376" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">4 May</text><text x="439" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">11 May</text><text x="503" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">18 May</text><text x="566" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">25 May</text><text x="629" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">1 Jun</text><text x="692" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">8 Jun</text><text x="756" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">15 Jun</text><text x="819" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">22 Jun</text><text x="882" y="230" font-size="8.5" fill="#6B7A8D" text-anchor="middle">29 Jun</text><line x1="60" y1="26" x2="60" y2="214" stroke="#D6DEE7"/><line x1="60" y1="214" x2="882" y2="214" stroke="#D6DEE7"/></svg>
+    <div class="leg"><span><span class="swl" style="background:#1A2332"></span>CPM total ponderado (MP + Open)</span>
+      <span><span class="swl" style="background:#9AB7D6"></span>CPM solo Open (referencia)</span></div>
+    <div class="callout"><b>Conclusión:</b> aun con MP al 64% del gasto en la semana de Hot Sale, el CPM ponderado total
+      fue <b>$11.76</b> — más bajo que semanas de abril sin MP ($16–18). El Marketplace <b>no elevó el costo total de la
+      cuenta</b>; la línea total sigue de cerca a la de Open.</div>
+  </div>
+
+  <table style="margin-top:16px">
+    <thead><tr><th class="hm">Mes</th><th class="hm">Costo MP</th><th class="ho">Costo Open</th><th class="hn">CPM total pond.</th><th class="hn">Sesiones</th><th class="hor">Costo/sesión</th></tr></thead>
+    <tbody>
+      <tr><td>Abril</td><td>$41,373</td><td>$190,117</td><td>$10.74</td><td>121,962</td><td>$1.90</td></tr>
+      <tr style="background:#FFF6E6"><td>Mayo (Hot Sale)</td><td>$181,826</td><td>$205,555</td><td>$11.48</td><td>116,284</td><td class="neg">$3.33</td></tr>
+      <tr><td>Junio</td><td>$13,125</td><td>$100,454</td><td>$5.81</td><td>87,223</td><td class="pos">$1.30</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 03 COSTO MP: mejor inventario + optimización -->
+<div class="sh sh-oe"><span class="n">03</span> ¿ES MÁS CARO MP? SÍ POR LÍNEA — PERO ES MEJOR INVENTARIO Y OPTIMIZABLE</div>
+<div class="body">
+  <div class="grid2" style="margin-top:0">
+    <div>
+      <table>
+        <thead><tr><th class="hn">Vista</th><th class="ho">Open</th><th class="hm">MP</th></tr></thead>
+        <tbody>
+          <tr><td>CPM total ponderado <span style="font-weight:400;color:var(--faint);font-size:10px">(MP + Open)</span></td><td colspan="2" style="text-align:center;font-weight:700">$11.76</td></tr>
+          <tr><td>CPM promedio por línea</td><td>$9.36</td><td class="neg">$17.69</td></tr>
+          <tr><td>Viewability (abril, limpio)</td><td>72.6%</td><td class="pos">82.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout" style="margin-top:0"><b>Sí, por línea MP sale más caro</b> ($17.69 vs $9.36): incluye deals premium
+      de baja escala. La contraparte: es <b>mejor inventario</b> (82.5% viewability vs 72.6%, brand-safe, menos fraude). Y ese
+      costo <b>se puede optimizar</b>: con <b>control de puja (bid caps) desde DV360</b> que aplique el trading desk, el CPM de
+      MP puede bajar al nivel del Open sin perder la calidad del entorno. El costo actual es de configuración, no del canal.</div>
+  </div>
+</div>
+
+<!-- 04 SESIONES vs FLT -->
+<div class="sh sh-mp"><span class="n">04</span> SESIONES GA4 vs FLOODLIGHT · LA SEÑAL DE OPTIMIZACIÓN</div>
+<div class="body">
+  <div class="grid2" style="margin-top:0">
+    <div>
+      <table>
+        <thead><tr><th class="ho">Audiencia</th><th class="ho">Sesiones</th><th class="ho">% con interacción</th></tr></thead>
+        <tbody>
+          <tr><td>Other-Audiences</td><td>142,034</td><td class="neg">42.5%</td></tr>
+          <tr><td>1P / Custom Intent</td><td>58,087</td><td class="pos">53.8%</td></tr>
+          <tr><td>Affinity</td><td>27,680</td><td>55.3%</td></tr>
+          <tr><td>In-Market</td><td>14,355</td><td class="pos">56.9%</td></tr>
+        </tbody>
+      </table>
+      <div class="callout" style="margin-top:12px"><b>Eventos clave GA4 = 0</b> en el export: DV360 optimiza a
+        <b>Floodlight (FLT)</b>, no a sesiones reales. Las genéricas traen volumen pero con la peor interacción (42.5%);
+        la 1P e In-Market, menos volumen pero la mejor calidad de sesión.</div>
+    </div>
+    <div class="chartbox" style="margin-top:0">
+      <div class="ctit">Costo por sesión por mes (MXN)</div>
+      <svg viewBox="0 0 300 150" width="100%" xmlns="http://www.w3.org/2000/svg"><line x1="44" y1="116" x2="286" y2="116" stroke="#EEF2F6"/><text x="38" y="119" font-size="8" fill="#9AA7B5" text-anchor="end">$0</text><line x1="44" y1="89" x2="286" y2="89" stroke="#EEF2F6"/><text x="38" y="92" font-size="8" fill="#9AA7B5" text-anchor="end">$1</text><line x1="44" y1="62" x2="286" y2="62" stroke="#EEF2F6"/><text x="38" y="65" font-size="8" fill="#9AA7B5" text-anchor="end">$2</text><line x1="44" y1="34" x2="286" y2="34" stroke="#EEF2F6"/><text x="38" y="37" font-size="8" fill="#9AA7B5" text-anchor="end">$3</text><rect x="64" y="64" width="40" height="52" fill="#1A2332" rx="3"/><text x="84" y="58" font-size="11" font-weight="700" fill="#1A2332" text-anchor="middle">$1.90</text><text x="84" y="130" font-size="9" fill="#6B7A8D" text-anchor="middle">ABR</text><rect x="145" y="25" width="40" height="91" fill="#F96302" rx="3"/><text x="165" y="19" font-size="11" font-weight="700" fill="#F96302" text-anchor="middle">$3.33</text><text x="165" y="130" font-size="9" fill="#6B7A8D" text-anchor="middle">MAY</text><rect x="226" y="81" width="40" height="35" fill="#1A2332" rx="3"/><text x="246" y="75" font-size="11" font-weight="700" fill="#1A2332" text-anchor="middle">$1.30</text><text x="246" y="130" font-size="9" fill="#6B7A8D" text-anchor="middle">JUN</text><line x1="44" y1="116" x2="286" y2="116" stroke="#D6DEE7"/></svg>
+      <div style="font-size:10.5px;color:var(--mid);margin-top:8px;line-height:1.5">Meta operativa: sostener el CPS cerca de
+        <b>$1.90</b> (nivel abril) sin perder volumen, optimizando a <b>sesiones con interacción</b>, no a FLT.</div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 AUDIENCIAS -->
+<div class="sh sh-or"><span class="n">05</span> AUDIENCIAS · QUÉ ES "OTHER-AUDIENCES", QUÉ FUNCIONA Y QUÉ NO</div>
+<div class="body">
+  <div class="infobox" style="margin-top:0;border-left-color:var(--orange)"><b>¿Qué son las "Other-Audiences"?</b> Es el nombre de las
+    líneas de prospección. Al abrir el <b>reporte de audiencias de DV360</b>, adentro no hay un segmento definido sino un mix de
+    audiencias amplias de Google: <b>65% Affinity y 32% In-Market</b>, con apenas <b>2.9% de first-party</b>. Cerca del <b>31% del
+    gasto</b> cae en segmentos totalmente fuera de categoría (Bargain Hunters, Banking Services, Shopping Enthusiasts, Avid News
+    Readers, Beauty Mavens, Sports Fans, Luxury Shoppers). Por eso el inventario premium rindió poco: se pagó caro para llegar a
+    audiencias amplias sin intención de compra.</div>
+  <table style="margin-top:14px">
+    <thead><tr><th class="hn">Audiencia</th><th class="hn">Viewability</th><th class="hn">Inventario recomendado</th></tr></thead>
+    <tbody>
+      <tr style="background:var(--mp-lt)"><td>First-party / Custom Intent<br><span style="font-weight:400;color:var(--faint);font-size:10px">hoy 0% en MP</span></td><td class="pos">62–69%</td><td><span class="rec mp">→ Marketplace</span></td></tr>
+      <tr style="background:var(--mp-lt)"><td>In-Market <b>on-category</b><br><span style="font-weight:400;color:var(--faint);font-size:10px">Kitchen &amp; Bath · Tools · Moving &amp; Relocation</span></td><td>60–62%</td><td><span class="rec mp">→ Marketplace</span></td></tr>
+      <tr><td>Affinity relevante (DIY · Home &amp; Garden)</td><td>63%</td><td><span class="rec oe">→ Open (puja baja)</span></td></tr>
+      <tr><td>In-Market fuera de categoría (Banking · Financial)</td><td>53%</td><td><span class="rec no">Pausar</span></td></tr>
+      <tr><td>Affinity off-category (News · Beauty · Music · Sports)</td><td class="neg">35–40%</td><td><span class="rec no">Pausar</span></td></tr>
+    </tbody>
+  </table>
+  <div class="wcols">
+    <div class="wcol good"><div class="wh">✔ Funcionan</div>
+      <ul>
+        <li><span><b>1P · Top-producto BNO</b></span><span class="m">2,593 conv · CPA $0.08</span></li>
+        <li><span><b>1P · Compradores 7 días</b> (PSO)</span><span class="m">3,766 conv · CPA $0.18</span></li>
+        <li><span><b>1P · Hotsale/Folleto/Promos</b></span><span class="m">CPA $0.24–0.47</span></li>
+        <li><span><b>In-Market · Kitchen &amp; Bath</b></span><span class="m">1,433 conv · view 61%</span></li>
+        <li><span><b>Affinity · Home Decor Enthusiasts</b></span><span class="m">19,241 conv · view 66%</span></li>
+      </ul></div>
+    <div class="wcol bad"><div class="wh">✘ No funcionan</div>
+      <ul>
+        <li><span><b>MSP · Banking / Debit / Appliances</b></span><span class="m">$15K+ · 0 conv</span></li>
+        <li><span><b>PSO · Home Decor Enthusiasts</b></span><span class="m">$7,221 · view 35%</span></li>
+        <li><span><b>PSO · Bargain Hunters / Beauty Mavens</b></span><span class="m">view 40%</span></li>
+        <li><span><b>BNO · Avid News Readers</b></span><span class="m">$3,790 · off-category</span></li>
+        <li><span><b>Movie Lovers / Latin Music / Sports</b></span><span class="m">sin intención</span></li>
+      </ul></div>
+  </div>
+  <div class="note" style="margin-top:12px;margin-bottom:0">MSP aparte: <b>$22.7K con 0 conversiones</b> en todas sus audiencias — revisar tracking/floodlight, no solo segmentación.</div>
+</div>
+
+<!-- 05 PLAN DE ESTRUCTURA DE CAMPAÑAS -->
+<div class="sh sh-navy"><span class="n">06</span> PLAN DE ESTRUCTURA DE CAMPAÑAS Y NEXT STEPS</div>
+<div class="body">
+  <div class="note">Reemplazar el cajón "other-audiences" por <b>3 líneas de pedido (IO) definidas por capa</b> en cada
+    campaña de categoría. Cada capa tiene su audiencia, su inventario y su nivel de puja:</div>
+  <div class="struct">
+    <div class="scampt">Campaña por categoría · ejemplo: DV360_DIY_AO_BNO (Baños)</div>
+    <div class="io head"><div>Línea de pedido</div><div>Audiencia</div><div class="inv">Inventario</div><div class="bid">Puja</div></div>
+    <div class="io i1"><div class="ioname">IO 1 · Núcleo</div><div class="aud">First-party <small>visitantes · ATC · compradores · top-producto 60/90D</small></div><div class="inv mp">Marketplace</div><div class="bid">Alta</div></div>
+    <div class="io i2"><div class="ioname">IO 2 · Intención</div><div class="aud">In-Market on-category + Custom Intent <small>Kitchen &amp; Bath · "muebles de baño"</small></div><div class="inv mp">Marketplace</div><div class="bid">Media-alta</div></div>
+    <div class="io i3"><div class="ioname">IO 3 · Volumen</div><div class="aud">Affinity relevante filtrada <small>DIY · Home &amp; Garden</small></div><div class="inv oe">Open Exchange</div><div class="bid">Baja</div></div>
+    <div class="excl">Exclusiones globales: News · Beauty · Music · Sports · Banking · Financial · y compradores 1P recientes en las capas de prospección.</div>
+  </div>
+
+  <div class="steps" style="margin-top:8px">
+    <div class="step"><div class="num">1</div><div><div class="stt">Migrar first-party e In-Market on-category a MP</div>
+      <div class="std">Hoy 1P está 0% en MP. Es la data de mejor CPA ($0.08–0.47) y viewability (62–69%): debe heredar el inventario premium, no las genéricas.</div></div></div>
+    <div class="step"><div class="num">2</div><div><div class="stt">Aplicar control de puja en DV360</div>
+      <div class="std">El trading desk fija <b>bid caps</b> por línea para bajar el CPM de MP al nivel de Open sin perder calidad. El costo de MP es optimizable, no fijo.</div></div></div>
+    <div class="step"><div class="num">3</div><div><div class="stt">Optimizar a sesiones GA4, no a Floodlight</div>
+      <div class="std">Importar <b>"sesiones con interacción" de GA4</b> como conversión de optimización (hoy eventos clave = 0; DV360 optimiza a FLT inflado). Esto controla el costo por sesión.</div></div></div>
+    <div class="step"><div class="num hl">4</div><div><div class="stt">Descubrir audiencias con Match IA (Converged de Havas)</div>
+      <div class="std">Usar <b>Match IA — la evolución de Converged de Havas</b> para modelar look-alikes de compradores 1P y señales de intención, y alimentar las capas de MP en vez de segmentos genéricos de Google.</div></div></div>
+    <div class="step"><div class="num">5</div><div><div class="stt">Re-evaluar MP fuera de Hot Sale · meta CPS ~$1.90</div>
+      <div class="std">Piloto de MP + 1P en periodo normal (2–3 semanas), con la estructura de 3 capas, para sostener el CPS a nivel abril sin caída de sesiones.</div></div></div>
+  </div>
+</div>
+
+<div class="foot">
+  <b>Fuentes:</b> Reporte_Performance_MP_THD_Final (DV360 diario, Abr–Jun 2026 · viewability real) · TD_Resumen (tabla dinámica) · GA4 (sesiones, con interacción, eventos clave) · Audience Lists BNO·HRR·MSP·PNT·PSO.<br>
+  <b>Nota:</b> CPM ponderado = costo/impresiones; CPM prom = promedio de eCPM por línea. La ventana de MP coincidió con Hot Sale, que infla todos los costos. Preparado para The Home Depot · MOTECH by Havas México.
+</div>
+
+</div></body></html>
